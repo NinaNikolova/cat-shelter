@@ -3,6 +3,6 @@ const catManager = require('../managers/catManager')
 
 homeController.get('/', (req, res)=>{
 const cats = catManager.getAll()
-    res.render('/', cats)
+    res.render('home', {cats})
 })
 module.exports=homeController;
